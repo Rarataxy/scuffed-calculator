@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SCUFFED CALCUATOR</h1>
+    <input id="nrsel" type="text" placeholder="Dawaj numer">
+    <h1 id="output"></h1>
+
+
+    <script>
+        document.getElementById("nrsel").addEventListener("keydown", calc, false)
+        let nrs = []
+        function calc (e){
+        let keyCode = e.keyCode;
+            if(keyCode==13) {
+                let inp = document.getElementById("nrsel");
+                nrs.push(inp.value)
+                inp.value = '';
+                inp.placeholder = 'Dawaj drugi numer'
+            } else {
+                return
+            }
+            if(nrs.length == 2){
+                let one = parseInt(nrs[0]);
+                let two = parseInt(nrs[1]);
+                let outpt = one + two; 
+                document.getElementById('output').innerText = outpt;
+            } else if(nrs.length >= 2){
+                alert('I have added TWO numbers!');
+                alert('But it appears calculating two numbers is my current limit! JOJO!!');
+            }
+        }
+    </script>
+</body>
+</html>
