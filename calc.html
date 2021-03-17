@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>SCUFFED CALCUATOR</h1>
-    <input id="nrsel" type="text" placeholder="Dawaj numer">
+    <input id="nrsel" type="text" placeholder="Was yo number">
     <h1 id="output"></h1>
 
 
@@ -21,7 +21,7 @@
                 let inp = document.getElementById("nrsel");
                 nrs.push(inp.value)
                 inp.value = '';
-                inp.placeholder = 'Dawaj drugi numer'
+                inp.placeholder = 'Was yo second number'
             } else {
                 return
             }
@@ -31,8 +31,7 @@
                 let outpt = one + two; 
                 document.getElementById('output').innerText = outpt;
             } else if(nrs.length >= 2){
-                alert('I have added TWO numbers!');
-                alert('But it appears calculating two numbers is my current limit! JOJO!!');
+                alert('It appears that adding 2 numbers is my current limit!');
             }
         }
     </script>
